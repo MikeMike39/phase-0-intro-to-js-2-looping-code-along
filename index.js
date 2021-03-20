@@ -1,24 +1,16 @@
-
-// Defining "namesArray" an "messageArray"
-const namesArray = ['Lisa', 'Kaitlin', 'Jan'];
-const messageArray = [];
-
-//Function "writeCards" returning an array of thank you messages for each name provided to the function
-
-function writeCards(namesArray,messages) {
-    for (let i = 0; i < namesArray.length; i++) {
-        messageArray[i] = `Thank you, ${namesArray[i]}, for the wonderful ${messages} gift!`;
-      }
-      return messageArray;
-}
-// Starting the countdown actual "11"
-let number = 0;
-
-// Function "countDown" logs each number when counting down, starting from the number provided
-
-function countDown(number) {
-    while (number >= 0) {
-        console.log(number);
-        number--;
+//Function "writeCards" with two arguments "names" "events"
+function writeCards(names, event) {
+    const messages = []
+    //For Loop over names an adds custom thank you for each name in the array
+    for (let i = 0; i < names.length; i++) {
+        const message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
+        messages.push(message);
     }
+
+    return messages
+}
+//Function "countDown"(number)
+function countDown(number) {
+    for (let i = number; i >= 0; i--)
+    console.log(i);
 }
